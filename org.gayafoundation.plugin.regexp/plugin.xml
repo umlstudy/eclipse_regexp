@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.gayafoundation.plugin.regexp.category.views"
+            name="regular expression">
+      </category>
+      <view
+            category="org.gayafoundation.plugin.regexp.category.views"
+            class="org.gayafoundation.plugin.regexp.view.RegExpView"
+            id="org.gayafoundation.plugin.regexp.view2"
+            icon="icons/reg2.png"
+            name="RegExp"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.gayafoundation.plugin.regexp.handler.RegExpHelpHandler"
+            id="org.gayafoundation.plugin.regexp.command.help"
+            name="Help">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.gayafoundation.plugin.regexp.view2">
+         <command
+               commandId="org.gayafoundation.plugin.regexp.command.help"
+               icon="icons/help_contents.gif"
+               label="Help"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
