@@ -1,0 +1,5 @@
+/TODO
+*.log
+bin/
+build/
+.gradle/
